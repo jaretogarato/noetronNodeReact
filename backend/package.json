@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "node",
+  "main": "server.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jaretogarato/noetronNodeReact.git"
+  },
+  "keywords": [
+    "LED",
+    "array",
+    "lighting",
+    "control"
+  ],
+  "author": "Jared Gallardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jaretogarato/noetronNodeReact/issues"
+  },
+  "homepage": "https://github.com/jaretogarato/noetronNodeReact#readme"
+}
