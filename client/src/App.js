@@ -36,10 +36,10 @@ class App extends Component {
   // just a note, here, in the front end, we use the id key of our data object
   // in order to identify which we want to Update or delete.
   // for our back end, we use the object id assigned by MongoDB to modify
-  // data base entries
+  // database entries
 
   // our first get method that uses our backend api to
-  // fetch data from our data base
+  // fetch data from our database
   getDataFromDb = () => {
     fetch('http://localhost:3001/api/getData')
       .then((data) => data.json())
@@ -47,7 +47,7 @@ class App extends Component {
   };
 
   // our put method that uses our backend api
-  // to create new query into our data base
+  // to create new query into our database
   putDataToDB = (message) => {
     let currentIds = this.state.data.map((data) => data.id);
     let idToBeAdded = 0;
@@ -80,7 +80,7 @@ class App extends Component {
   };
 
   // our update method that uses our backend api
-  // to overwrite existing data base information
+  // to overwrite existing database information
   updateDB = (idToUpdate, updateToApply) => {
     let objIdToUpdate = null;
     parseInt(idToUpdate);
@@ -107,12 +107,12 @@ class App extends Component {
           {data.length <= 0
             ? 'NO DB ENTRIES YET'
             : data.map((dat) => (
-                <li style={{ padding: '10px' }} key={data.message}>
-                  <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
-                  <span style={{ color: 'gray' }}> data: </span>
-                  {dat.message}
-                </li>
-              ))}
+              <li style={{ padding: '10px' }} key={data.message}>
+                <span style={{ color: 'gray' }}> id: </span> {dat.id} <br />
+                <span style={{ color: 'gray' }}> data: </span>
+                {dat.message}
+              </li>
+            ))}
         </ul>
         <div style={{ padding: '10px' }}>
           <input
